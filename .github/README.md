@@ -22,10 +22,6 @@ These are miscellaneous configuration files for all the programs I use regularly
 
 - **Theme Management:** [Flavours](https://github.com/misterio77/flavours/). A CLI program that makes consistent theming across all my programs a breeze.
 
-## Why are there two branches
-
-I'm using a bare repo stored in `~/.dotfiles` locally, but with a working tree of `~`. I also don't want this readme file in my home directory, so I work from the `dev` branch which doesn't have the readme, then have a github action merge the changes into the main branch for all to see.
-
 ## What it looks like
 
 It's a mystery!
