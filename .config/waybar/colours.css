@@ -1,23 +1,23 @@
 /*
 *
-* Base16 Ashes
-* Author: Jannik Siebert (https://github.com/janniks)
+* Base16 Colors
+* Author: mrmrs (http://clrs.cc)
 *
 */
 
-@define-color base00 #1c2023;
-@define-color base01 #393f45;
-@define-color base02 #565e65;
-@define-color base03 #747c84;
-@define-color base04 #adb3ba;
-@define-color base05 #c7ccd1;
-@define-color base06 #dfe2e5;
-@define-color base07 #f3f4f5;
-@define-color base08 #c7ae95;
-@define-color base09 #c7c795;
-@define-color base0A #aec795;
-@define-color base0B #95c7ae;
-@define-color base0C #95aec7;
-@define-color base0D #ae95c7;
-@define-color base0E #c795ae;
-@define-color base0F #c79595;
+@define-color base00 #111111;
+@define-color base01 #333333;
+@define-color base02 #555555;
+@define-color base03 #777777;
+@define-color base04 #999999;
+@define-color base05 #bbbbbb;
+@define-color base06 #dddddd;
+@define-color base07 #ffffff;
+@define-color base08 #ff4136;
+@define-color base09 #ff851b;
+@define-color base0A #ffdc00;
+@define-color base0B #2ecc40;
+@define-color base0C #7fdbff;
+@define-color base0D #0074d9;
+@define-color base0E #b10dc9;
+@define-color base0F #85144b;

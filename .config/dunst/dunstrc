@@ -20,24 +20,24 @@
 
 # Start flavours
 [global]
-frame_color = "#c795ae"
-separator_color = "#565e65"
+frame_color = "#b10dc9"
+separator_color = "#555555"
 
 [base16_low]
     msg_urgency = "low"
-    background = "#393f45"
-    foreground = "#c7ccd1"
-    frame_color = "#95c7ae"
+    background = "#333333"
+    foreground = "#bbbbbb"
+    frame_color = "#2ecc40"
 
 [base16_normal]
     msg_urgency = "normal"
-    background = "#393f45"
-    foreground = "#c7ccd1"
-    frame_color = "#c795ae"
+    background = "#333333"
+    foreground = "#bbbbbb"
+    frame_color = "#b10dc9"
 
 [base16_critical]
     msg_urgency = "critical"
-    background = "#393f45"
-    foreground = "#c7ccd1"
-    frame_color = "#c7ae95"
+    background = "#333333"
+    foreground = "#bbbbbb"
+    frame_color = "#ff4136"
 # End flavours
