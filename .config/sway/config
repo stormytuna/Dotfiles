@@ -1,0 +1,134 @@
+include /etc/sway/config.d/*
+include ./colours
+
+# Startup
+exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTO
+exec blueman-applet
+exec nm-applet
+exec dunst
+exec swww-daemon && swww img ./current-wallpaper
+exec steam -silent -forcedesktopscaling=1.75
+exec sleep 5 && vesktop
+exec waybar
+exec syncthing serve --no-browser --allow-newer-config
+
+# Input
+input "*" {
+  accel_profile flat
+  pointer_accel 0.5
+  repeat_delay 250
+  repeat_rate 35
+}
+
+# Outputs
+output "DP-1" {
+  pos 0 240
+  res 1920x1080@144Hz
+  transform 270
+}
+
+output "DP-3" {
+  pos 4920 361
+  res 2560x1440@120.02Hz
+}
+
+output "HDMI-A-1" {
+  pos 1080 0
+  res 3840x2160@119.88Hz
+}
+
+# Workspaces
+workspace "1" output "DP-1"
+workspace "3" output "DP-2"
+workspace "2" output "HDMI-A-1"
+workspace "4" output "HDMI-A-1"
+workspace "5" output "HDMI-A-1"
+workspace "6" output "HDMI-A-1"
+
+# Assignments
+assign [class="^discord$"] 1
+assign [class="^vesktop"] 1
+assign [app_id="^gamescope$"] 5
+
+# Window rules
+for_window [app_id="^kitty$"] opacity 0.9
+for_window [app_id="^thunar$"] opacity 0.9
+for_window [class="^vesktop$"] opacity 0.9
+for_window [class="^Spotify$"] opacity 0.9
+for_window [class="^steam$"] opacity 0.9
+for_window [class="^obsidian$"] opacity 0.9
+for_window [class="^jetbrains-rider$"] opacity 0.9
+#for_window [app_id="^com.gabm.satty$"] floating enable ; move position center ; resize set 90ppt 90ppt
+for_window [app_id="^gamescope$"] fullscreen enable
+
+# Keybinds
+## Workspace stuffs
+bindsym super+x workspace 1
+bindsym super+v workspace 3
+bindsym super+c workspace 2
+bindsym super+s workspace 4
+bindsym super+d workspace 5
+bindsym super+f workspace 6
+bindsym super+shift+x move container to workspace 1; workspace 1
+bindsym super+shift+v move container to workspace 3; workspace 3
+bindsym super+shift+c move container to workspace 2; workspace 2
+bindsym super+shift+s move container to workspace 4; workspace 4
+bindsym super+shift+d move container to workspace 5; workspace 5
+bindsym super+shift+f move container to workspace 6; workspace 6
+
+## Focus and window stuffs
+bindsym super+h focus left
+bindsym super+j focus right
+bindsym super+u focus up
+bindsym super+m focus down
+bindsym super+alt+h move left
+bindsym super+alt+j move right
+bindsym super+alt+u move up
+bindsym super+alt+m move down
+bindsym super+alt+ctrl+h resize grow width
+bindsym super+alt+ctrl+j resize shrink width
+bindsym super+alt+ctrl+u resize grow height
+bindsym super+alt+ctrl+m resize shrink height
+
+## Screenshots
+bindsym super+comma exec grim -g "$(slurp -o -c '#ff0000ff')" -t png - | wl-copy -t image/png; exec notify-send "Copied to clipboard"
+bindsym super+alt+comma exec grim -g "$(slurp -o -c '#ff0000ff')" -t ppm - | satty --filename -
+
+## Misc
+bindsym super+q kill
+bindsym super+b floating toggle
+bindsym super+g fullscreen toggle
+bindsym super+t exec kitty
+bindsym super+r exec pkill fuzzel || fuzzel
+bindsym super+e exec thunar
+bindsym super+alt+ctrl+shift+x focus output HDMI-A-1; exec wlogout --protocol layer-shell --buttons-per-row 4
+bindsym super+alt+ctrl+shift+c exec killall waybar && waybar
+bindsym super+alt+ctrl+shift+w focus output HDMI-A-1; exec ~/.config/sway/change-wallpaper.sh
+
+# Decoration
+font pango:Noto Sans 10.000000
+gaps inner 8
+gaps outer 12
+default_border pixel 2
+default_floating_border normal 2
+hide_edge_borders none
+focus_wrapping no
+focus_follows_mouse yes
+focus_on_window_activation smart
+mouse_warping output
+workspace_layout default
+workspace_auto_back_and_forth no
+seat "*" {
+  xcursor_theme "Bibata-Modern-Ice" 28
+}
+
+# Swayfx
+blur enable
+blur_passes 5
+blur_radius 1
+
+shadows enable
+shadow_blur_radius 40
+
+layer_effects "logout_dialog" blur enable
+layer_effects "waybar" blur enable

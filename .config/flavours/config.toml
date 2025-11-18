@@ -1,0 +1,49 @@
+ell = "bash -c '{}'"
+
+[[items]]
+file = "~/.config/waybar/colours.css"
+template = "waybar"
+hook = "pkill waybar; waybar & disown"
+rewrite = true
+
+[[items]]
+file = "~/.config/fuzzel/colours.ini"
+template = "fuzzel"
+rewrite = true
+
+[[items]]
+file = "~/.config/dunst/dunstrc"
+template = "dunst"
+hook = "dunstctl reload"
+start = "# Start flavours"
+end = "# End flavours"
+
+[[items]]
+file = "~/.config/kitty/colours.conf"
+template = "kitty"
+hook = "kitty @ set-colors -a '~/.config/kitty/colours.conf'"
+rewrite = true
+
+[[items]]
+file = "~/.config/starship.toml"
+template = "starship"
+start = "# Start flavours"
+end = "# End flavours"
+
+[[items]]
+file = "~/.config/vesktop/themes/flavour.css"
+template = "vesktop"
+rewrite = true
+
+[[items]]
+file = "~/.config/gtk-3.0/gtk.css"
+template = "gtk"
+hook = "gsettings set org.gnome.desktop.interface gtk-theme 'adw-gtk3'"
+rewrite = true
+
+[[items]]
+file = "~/.config/nvim/lua/plugins/colors.lua"
+template = "neovim"
+start = "-- Start flavours"
+end = "-- End flavours"
+

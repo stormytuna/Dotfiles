@@ -1,0 +1,43 @@
+* {
+  font-family: "Fira Code Nerd Font";
+}
+
+window {
+  background-color: alpha(#22273d, 0.5);
+}
+
+button {
+  margin: 500px 100px;
+  color: #ffffff;
+  font-size: 30px;
+  background-color: alpha(#525866, 0.8);
+  border: 5px solid #c8c8c8;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 75%;
+}
+
+button:hover {
+  color: #6bb8ff;
+  background-color: alpha(#878d96, 0.9);
+  border-color: #6bb8ff;
+}
+
+#shutdown {
+  background-image: url("./icons/power-off.png");
+}
+
+#reboot {
+  background-image: url("./icons/restart.png");
+}
+
+#logout {
+  background-image: url("./icons/exit.png");
+}
+
+#firmware {
+  background-image: url("./icons/firmware.png");
+}

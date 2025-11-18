@@ -1,0 +1,74 @@
+{
+  "layer": "top",
+  "position": "top",
+  "mode": "dock",
+  "height": 30,
+  "output": ["DP-1"],
+  "modules-left": [
+    "tray",
+    "pulseaudio",
+  ],
+  "modules-center": [],
+  "modules-right": [
+    "cpu",
+    "custom/gpu",
+    "memory",
+    "clock"
+  ],
+
+  "tray": {
+    "spacing": 5
+  },
+
+  "pulseaudio": {
+    "format": "{volume}% {icon} ",
+    "format-icons": {
+      "headphone": "",
+      "default": ["", "", ""]
+    },
+    "scroll-step": 1,
+    "on-click": "pavucontrol"
+  },
+
+  "bluetooth": {
+    "format": " {device_alias} - {status}"
+  },
+
+  "mpris": {
+    "format": "{player_icon}  | {title} | {artist} ({position}/{length})",
+    "tooltip-format": "",
+    "player-icons": {
+      "default": "",
+      "firefox": "",
+      "spotify": ""
+    },
+    "status-icons": {
+      "paused": "",
+      "playing": ""
+    },
+    "interval": 1
+  },
+
+  "cpu": {
+    "format": " {usage}%  ",
+    "interval": 5
+  },
+
+  "memory": {
+    "format": " {}%  ",
+    "interval": 5,
+    "tooltip-format": "{used:0.1f}GB used\n{total:0.1f}GB total\n{swapUsed:0.1f}GB swap"
+  },
+
+  "clock": {
+    "interval": 1,
+    "format": "{:%a %d %b %Y | %H:%M:%S}",
+    "max-length": 50
+  },
+
+  "custom/gpu": {
+    "exec": "cat /sys/class/hwmon/hwmon*/device/gpu_busy_percent",
+    "format": " {}%  ",
+    "interval": 5
+  }
+}
