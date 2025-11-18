@@ -38,6 +38,8 @@ def la [path = "."] { ls --long --all $path | sort-by type name --ignore-case | 
 
 def qvf [] { let owd = pwd; cd ~/.nixos; nvim; cd $owd }
 
+def .gc [message] { .git add -u; .git commit --message $message; .git push }
+
 alias cl = clear
 alias v = nvim
 
