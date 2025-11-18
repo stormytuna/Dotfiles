@@ -24,4 +24,10 @@ These are miscellaneous configuration files for all the programs I use regularly
 
 ## What it looks like
 
-It's a mystery!
+Colours and background subject to change!
+
+<img width="1079" height="1920" alt="image" src="https://github.com/user-attachments/assets/b99e9668-9edb-4354-abe5-f03cbec39747" />
+
+<img width="3840" height="2160" alt="image" src="https://github.com/user-attachments/assets/10f63446-62d5-4b58-91e2-7b93c82320cc" />
+
+<img width="3840" height="2160" alt="image" src="https://github.com/user-attachments/assets/9abd38a6-dc94-4319-bb97-8cc593ec911a" />
