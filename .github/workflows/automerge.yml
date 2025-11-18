@@ -2,9 +2,7 @@
 # I'm using a bare git repo, to keep my home folder clean I'm pushing everything to dev branch and having this merge it into main
 name: Automerge
 
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
     branches: [ "dev" ]
   pull_request:
@@ -22,7 +20,6 @@ jobs:
   merge:
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Merge with main
         run: |
