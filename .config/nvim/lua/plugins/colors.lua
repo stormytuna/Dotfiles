@@ -3,10 +3,10 @@ return {
   config = function()
     require('base16-colorscheme').setup({
 	  -- Start flavours
-	  base00 = '#111111', base01 = '#333333', base02 = '#555555', base03 = '#777777',
-	  base04 = '#999999', base05 = '#bbbbbb', base06 = '#dddddd', base07 = '#ffffff',
-	  base08 = '#ff4136', base09 = '#ff851b', base0A = '#ffdc00', base0B = '#2ecc40',
-	  base0C = '#7fdbff', base0D = '#0074d9', base0E = '#b10dc9', base0F = '#85144b'
+	  base00 = '#1c2023', base01 = '#393f45', base02 = '#565e65', base03 = '#747c84',
+	  base04 = '#adb3ba', base05 = '#c7ccd1', base06 = '#dfe2e5', base07 = '#f3f4f5',
+	  base08 = '#c7ae95', base09 = '#c7c795', base0A = '#aec795', base0B = '#95c7ae',
+	  base0C = '#95aec7', base0D = '#ae95c7', base0E = '#c795ae', base0F = '#c79595'
 	  -- End flavours
 	})
   end,
