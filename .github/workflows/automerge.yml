@@ -14,7 +14,7 @@ on:
   workflow_dispatch:
 
 env:
-  MY_REPO: https://stormytuan:${{secrets.GITHUB_TOKEN}}@github.com/stormytuna/Dotfiles.git
+  MY_REPO: https://stormytuna:${{secrets.GITHUB_TOKEN}}@github.com/stormytuna/Dotfiles.git
   MAIN_BRANCH: main
   DEV_BRANCH: dev
 
