@@ -22,6 +22,27 @@ These are miscellaneous configuration files for all the programs I use regularly
 
 - **Theme Management:** [Flavours](https://github.com/misterio77/flavours/). A CLI program that makes consistent theming across all my programs a breeze.
 
+## What I *don't* use and why
+
+I used to be a big fan of [home manager](https://github.com/nix-community/home-manager), the de facto program config management solution for NixOS. I've changed to this separated approach mainly due to how much I like to tinker, waiting 20+ seconds for tiny tweaks to my config became too much for me.
+
+## Showcase
+
+### Wallpaper switcher script
+
+I spent way too long making a (nice looking) wallpaper switcher script with rofi.
+
+<img width="3840" height="2160" alt="image" src="https://github.com/user-attachments/assets/882c8e3f-545f-42ee-93b7-7a4c56ff5493" />
+
+Revevant code:
+- [Script itself](https://github.com/stormytuna/Dotfiles/blob/main/.config/sway/change-wallpaper.sh)
+- [Rofi theme file](https://github.com/stormytuna/Dotfiles/blob/main/.config/sway/change-wallpaper-rofi.rasi)
+- [Invoking it with a keybind](https://github.com/stormytuna/Dotfiles/blob/7b0a0b6e512b6c4af206bf066493a93bc48cc90d/.config/sway/config#L108)
+
+## How to use this
+
+Don't! You can poke around my configs and steal stuff you like, but this isn't intended to be a me-flavoured distribution.
+
 ## What it looks like
 
 Colours and background subject to change!
@@ -31,3 +52,4 @@ Colours and background subject to change!
 <img width="3840" height="2160" alt="image" src="https://github.com/user-attachments/assets/10f63446-62d5-4b58-91e2-7b93c82320cc" />
 
 <img width="3840" height="2160" alt="image" src="https://github.com/user-attachments/assets/9abd38a6-dc94-4319-bb97-8cc593ec911a" />
+
