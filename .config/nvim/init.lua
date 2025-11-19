@@ -20,6 +20,7 @@ vim.o.smartcase = true
 
 -- Keymaps
 vim.keymap.set('n', '<esc>', '<esc>:nohlsearch<cr>:helpclose<cr>')
+vim.keymap.set('n', 'U', '<c-r>')
 vim.keymap.set('n', '<leader>o', ':update<cr>:source<cr>')
 vim.keymap.set('n', '<leader>w', ':write<cr>')
 vim.keymap.set('n', '<leader>q', ':quit<cr>')

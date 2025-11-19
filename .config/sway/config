@@ -20,8 +20,6 @@ input "*" {
   repeat_rate 35
 }
 
-floating_modifier super
-
 # Outputs
 output "DP-1" {
   pos 0 240
