@@ -1,3 +1,5 @@
+$env.path = ($env.path | prepend "/home/stormytuna/.scripts")
+
 $env.config.show_banner = false
 $env.config.buffer_editor = "nvim"
 $env.config.table.mode = "thin"
