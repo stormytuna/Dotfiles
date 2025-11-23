@@ -2,6 +2,9 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+-- LSPs
+vim.lsp.enable({ 'lua_ls', 'nil_ls', 'omnisharp' })
+
 -- Lazy
 require('config.lazy')
 
@@ -26,11 +29,39 @@ vim.keymap.set('n', '<leader>w', ':write<cr>')
 vim.keymap.set('n', '<leader>q', ':quit<cr>')
 vim.keymap.set('n', '<leader>e', '<cmd>Oil --float<cr>')
 
+vim.keymap.set('n', '<leader>ff', '<cmd>Telescope find_files<cr>')
+vim.keymap.set('n', '<leader>fg', '<cmd>Telescope live_grep<cr>')
+
+vim.keymap.set('n', '<leader>r', vim.lsp.buf.rename)
+vim.keymap.set('n', '<leader>lr', vim.lsp.buf.references)
+vim.keymap.set('n', '<leader>li', vim.lsp.buf.implementation)
+vim.keymap.set('n', '<leader>ld', vim.lsp.buf.type_definition)
+vim.keymap.set('n', '<leader>la', vim.lsp.buf.code_action)
+vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
+vim.keymap.set('i', '<c-space>', vim.lsp.buf.signature_help)
+
 -- Autocommands
 vim.api.nvim_create_autocmd('TextYankPost', {
-  desc = 'Highlight when yanking text',
-  group = vim.api.nvim_create_augroup('highlight-yank', { clear = true }),
-  callback = function()
-    vim.hl.on_yank()
-  end,
+	desc = 'Highlight when yanking text',
+	group = vim.api.nvim_create_augroup('highlight-yank', { clear = true }),
+	callback = function()
+		vim.hl.on_yank()
+	end,
+})
+
+vim.api.nvim_create_autocmd('LspAttach', {
+	group = vim.api.nvim_create_augroup('autoformat', {}),
+	desc = 'Auto format when saving',
+	callback = function(args)
+		if not client:supports_method('textDocument/willSaveWaitUntil')
+				and client:supports_method('textDocument/formatting') then
+			vim.api.nvim_create_autocmd('BufWritePre', {
+				group = vim.api.nvim.create_augroup('autoformat', { clear = false }),
+				buffer = args.buf,
+				callback = function()
+					vim.lsp.buf.format({ bufnr = args.buf, timeout_ms = 1000 })
+				end
+			})
+		end
+	end,
 })

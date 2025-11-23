@@ -38,7 +38,9 @@ def l [path = "."] { ls $path | sort-by type name --ignore-case }
 def ll [path = "."] { ls --long $path | sort-by type name --ignore-case | select mode user group type name size created accessed modified }
 def la [path = "."] { ls --long --all $path | sort-by type name --ignore-case | select mode user group type name size created accessed modified }
 
-def qvf [] { let owd = pwd; cd ~/.nixos; nvim; cd $owd }
+def qvf [] { let owd = pwd; cd ~/.nixos; nvim .; cd $owd }
+def qvt [] { let owd = pwd; cd ~/ws/src/os/tModLoader/src/tModLoader; nvim .; cd $owd }
+def qvv [] { let owd = pwd; cd ~/.config/nvim; nvim .; cd $owd }
 
 def .gc [message] { .git add -u; .git commit --message $message; .git push }
 

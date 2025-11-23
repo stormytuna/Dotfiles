@@ -4,7 +4,7 @@ return {
   ---@type oil.SetupOpts
   opts = {
 	delete_to_trash = true,
-    keymaps = { 
+    keymaps = {
 	  ["<bs>"] = { "actions.parent", mode = "n" },
 	  ["<esc>"] = { "actions.close", mode = "n" },
 	},
