@@ -7,7 +7,7 @@ exec blueman-applet
 exec nm-applet
 exec dunst
 exec steam -silent -forcedesktopscaling=1.75
-exec sleep 5 && swww-daemon && swww img ./current-wallpaper --transition-duration 2 --transition-type any --transition-step 255 --transition-fps 120
+exec sleep 2 && swww-daemon && sleep 2 && swww img ./current-wallpaper --transition-duration 2 --transition-type any --transition-step 255 --transition-fps 120
 exec sleep 5 && vesktop
 exec waybar
 exec syncthing serve --no-browser --allow-newer-config
@@ -49,13 +49,13 @@ workspace "6" output "HDMI-A-1"
 
 # Assignments
 assign [class="^discord$"] 1
-assign [class="^vesktop"] 1
+assign [app_id="^vesktop$"] 1
 assign [app_id="^gamescope$"] 5
 
 # Window rules
 for_window [app_id="^kitty$"] opacity 0.9
 for_window [app_id="^thunar$"] opacity 0.9
-for_window [class="^vesktop$"] opacity 0.9
+for_window [app_id="^vesktop$"] opacity 0.9
 for_window [class="^Spotify$"] opacity 0.9
 for_window [class="^steam$"] opacity 0.9
 for_window [class="^obsidian$"] opacity 0.9
