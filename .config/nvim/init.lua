@@ -3,7 +3,27 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- LSPs
-vim.lsp.enable({ 'lua_ls', 'nil_ls', 'omnisharp' })
+vim.lsp.enable({ 'lua_ls', 'nil_ls', 'roslyn_ls' })
+
+vim.lsp.config['lua_ls'] = {
+  settings = {
+    Lua = {
+      runtime = {
+        version = 'LuaJIT'
+      },
+      diagnostics = {
+        -- Get rid of pesky unrecognised 'vim' global
+        globals = {
+          'vim', 'require'
+        }
+      },
+      workspace = {
+        -- Make LSP aware of neovim runtime files
+        library = vim.api.nvim_get_runtime_file('', true)
+      }
+    }
+  }
+}
 
 -- Lazy
 require('config.lazy')
@@ -20,6 +40,9 @@ vim.o.winborder = 'single'
 
 vim.o.ignorecase = true
 vim.o.smartcase = true
+
+-- Diagnostics
+vim.diagnostic.config({ virtual_lines = true })
 
 -- Keymaps
 vim.keymap.set('n', '<esc>', '<esc>:nohlsearch<cr>:helpclose<cr>')
@@ -38,30 +61,31 @@ vim.keymap.set('n', '<leader>li', vim.lsp.buf.implementation)
 vim.keymap.set('n', '<leader>ld', vim.lsp.buf.type_definition)
 vim.keymap.set('n', '<leader>la', vim.lsp.buf.code_action)
 vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
-vim.keymap.set('i', '<c-space>', vim.lsp.buf.signature_help)
+vim.keymap.set('i', '<c-s-space>', vim.lsp.buf.signature_help)
 
 -- Autocommands
 vim.api.nvim_create_autocmd('TextYankPost', {
-	desc = 'Highlight when yanking text',
-	group = vim.api.nvim_create_augroup('highlight-yank', { clear = true }),
-	callback = function()
-		vim.hl.on_yank()
-	end,
+  desc = 'Highlight when yanking text',
+  group = vim.api.nvim_create_augroup('highlight-yank', { clear = true }),
+  callback = function()
+    vim.hl.on_yank()
+  end,
 })
 
-vim.api.nvim_create_autocmd('LspAttach', {
-	group = vim.api.nvim_create_augroup('autoformat', {}),
-	desc = 'Auto format when saving',
-	callback = function(args)
-		if not client:supports_method('textDocument/willSaveWaitUntil')
-				and client:supports_method('textDocument/formatting') then
-			vim.api.nvim_create_autocmd('BufWritePre', {
-				group = vim.api.nvim.create_augroup('autoformat', { clear = false }),
-				buffer = args.buf,
-				callback = function()
-					vim.lsp.buf.format({ bufnr = args.buf, timeout_ms = 1000 })
-				end
-			})
-		end
-	end,
-})
+-- TODO: Fix? Remove? idk
+--vim.api.nvim_create_autocmd('LspAttach', {
+--	group = vim.api.nvim_create_augroup('autoformat', {}),
+--	desc = 'Auto format when saving',
+--	callback = function(args)
+--		if not client:supports_method('textDocument/willSaveWaitUntil')
+--				and client:supports_method('textDocument/formatting') then
+--			vim.api.nvim_create_autocmd('BufWritePre', {
+--				group = vim.api.nvim.create_augroup('autoformat', { clear = false }),
+--				buffer = args.buf,
+--				callback = function()
+--					vim.lsp.buf.format({ bufnr = args.buf, timeout_ms = 1000 })
+--				end
+--			})
+--		end
+--	end,
+--})
