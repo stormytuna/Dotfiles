@@ -93,7 +93,7 @@ bindsym super+alt+ctrl+u resize grow height
 bindsym super+alt+ctrl+m resize shrink height
 
 ## Screenshots
-bindsym super+comma exec grim -g "$(slurp -o -c '#ff0000ff')" -t png - | wl-copy -t image/png; exec notify-send "Copied to clipboard"
+bindsym super+comma exec ~/.config/sway/print-screen.sh
 bindsym super+alt+comma exec grim -g "$(slurp -o -c '#ff0000ff')" -t ppm - | satty --filename -
 
 ## Misc
