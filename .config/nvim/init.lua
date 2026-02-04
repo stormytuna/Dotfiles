@@ -78,6 +78,14 @@ vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
 vim.keymap.set('i', '<c-s-space>', vim.lsp.buf.signature_help)
 vim.keymap.set('i', '<c-bs>', '<c-w>')
 
+local harpoon = require('harpoon')
+vim.keymap.set('n', '<leader>ha', function() harpoon:list():add() end)
+vim.keymap.set('n', '<leader>hr', function() harpoon:list():remove() end)
+vim.keymap.set('n', '<leader>hc', function() harpoon:list():clear() end)
+vim.keymap.set('n', '<C-e>', function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
+vim.keymap.set('n', '<C-h>', function() harpoon.list():select(1) end)
+vim.keymap.set('n', '<C-t>', function() harpoon.list():select(2) end)
+
 -- Autocommands
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking text',
