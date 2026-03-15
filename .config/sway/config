@@ -93,7 +93,7 @@ bindsym super+alt+ctrl+u resize grow height
 bindsym super+alt+ctrl+m resize shrink height
 
 ## Screenshots
-bindsym super+comma exec ~/.config/sway/print-screen.sh
+bindsym super+comma exec ~/.config/sway/scripts/print-screen.sh
 bindsym super+alt+comma exec grim -g "$(slurp -o -c '#ff0000ff')" -t ppm - | satty --filename -
 
 ## Misc
@@ -105,7 +105,8 @@ bindsym super+r exec pkill fuzzel || fuzzel
 bindsym super+e exec thunar
 bindsym super+alt+ctrl+shift+x focus output HDMI-A-1; exec wlogout --protocol layer-shell --buttons-per-row 4
 bindsym super+alt+ctrl+shift+c exec killall waybar && waybar
-bindsym super+alt+ctrl+shift+w focus output HDMI-A-1; exec ~/.config/sway/change-wallpaper.sh
+bindsym super+alt+ctrl+shift+w focus output HDMI-A-1; exec ~/.config/sway/scripts/change-wallpaper.sh
+bindsym super+y exec ~/.config/sway/scripts/send-keypress.sh "app_id=\"vesktop\"" -M ctrl -M shift -k m -m ctrl -m shift
 
 # Decoration
 font pango:Noto Sans 10.000000

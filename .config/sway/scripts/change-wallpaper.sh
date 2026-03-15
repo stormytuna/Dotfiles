@@ -2,7 +2,7 @@
 
 chosen_wallpaper=$(for wallpaper in ~/.config/sway/wallpapers/*
   do echo -en "$wallpaper\0icon\x1f$wallpaper\n"
-done | rofi -dmenu -show-icons -monitor 'HDMI-A-1' -config ~/.config/sway/change-wallpaper-rofi.rasi)
+done | rofi -dmenu -show-icons -monitor 'HDMI-A-1' -config ~/.config/sway/scripts/change-wallpaper-rofi.rasi)
 
 if [ -z ${chosen_wallpaper} ]; then 
   exit 0

@@ -5,7 +5,7 @@ return {
   build = ':TSUpdate',
   opts = {
     ensure_installed = {
-      'lua', 'nix', 'c_sharp'
-    }
+      'lua', 'nix', 'c_sharp', 'html', 'css'
+    },
   }
 }

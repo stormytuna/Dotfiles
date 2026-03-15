@@ -30,6 +30,7 @@ alias gc = git commit --message
 alias ga = git add --all
 alias gp = git push
 alias gpl = git pull
+alias gu = git reset --soft HEAD~1
 alias .git = git --git-dir=/home/stormytuna/.dotfiles --work-tree=/home/stormytuna
 
 # misc stuff
