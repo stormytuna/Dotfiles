@@ -3,7 +3,7 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- LSPs
-vim.lsp.enable({ 'lua_ls', 'nil_ls', 'roslyn_ls', 'jdtls', 'html', 'cssls' })
+vim.lsp.enable({ 'lua_ls', 'nil_ls', 'roslyn_ls', 'jdtls', 'html', 'cssls', 'zls' })
 
 vim.lsp.config['lua_ls'] = {
   settings = {
@@ -32,7 +32,10 @@ require('config.lazy')
 vim.o.number = true
 vim.o.relativenumber = true
 vim.o.mouse = 'a'
-vim.o.tabstop = 4
+vim.o.tabstop = 8
+vim.o.softtabstop = 4
+vim.o.shiftwidth = 4
+vim.o.expandtab = true
 vim.o.shiftwidth = 2
 vim.o.clipboard = 'unnamedplus'
 vim.o.signcolumn = 'yes'
@@ -44,15 +47,9 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 
 -- Diagnostics
-vim.diagnostic.config({
-  virtual_lines = true,
-  virutal_text = true,
-  underline = {
-    severity = {
-      min = vim.diagnostic.severity.WARN,
-    },
-  },
-})
+--vim.diagnostic.config({
+--  virtual_text = false, -- Using tiny-inline-diagnostic
+--})
 
 -- Keymaps
 vim.keymap.set('n', '<esc>', '<esc>:nohlsearch<cr>:helpclose<cr>')

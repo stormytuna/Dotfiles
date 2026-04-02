@@ -7,7 +7,7 @@ exec blueman-applet
 exec nm-applet
 exec dunst
 exec steam -silent -forcedesktopscaling=1.75
-exec sleep 2 && swww-daemon && sleep 2 && swww img ./current-wallpaper --transition-duration 2 --transition-type any --transition-step 255 --transition-fps 120
+exec sleep 2 && awww-daemon && sleep 2 && awww img ~/.config/sway/current-wallpaper --transition-duration 2 --transition-type any --transition-step 255 --transition-fps 120
 exec sleep 5 && vesktop
 exec waybar
 exec syncthing serve --no-browser --allow-newer-config

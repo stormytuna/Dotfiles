@@ -9,4 +9,4 @@ if [ -z ${chosen_wallpaper} ]; then
 fi
 
 cp -f "$chosen_wallpaper" ~/.config/sway/current-wallpaper
-swww img ~/.config/sway/current-wallpaper --transition-duration 2 --transition-type any --transition-step 255 --transition-fps 120
+awww img ~/.config/sway/current-wallpaper --transition-duration 2 --transition-type any --transition-step 255 --transition-fps 120
