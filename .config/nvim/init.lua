@@ -3,7 +3,16 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- LSPs
-vim.lsp.enable({ 'lua_ls', 'nil_ls', 'roslyn_ls', 'jdtls', 'html', 'cssls', 'zls' })
+vim.lsp.enable({
+  'lua_ls',
+  'nil_ls',
+  --'roslyn_ls',
+  'omnisharp',
+  'jdtls',
+  'html',
+  'cssls',
+  'zls'
+})
 
 vim.lsp.config['lua_ls'] = {
   settings = {
