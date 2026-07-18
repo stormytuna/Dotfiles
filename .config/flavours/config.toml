@@ -47,3 +47,13 @@ template = "neovim"
 start = "-- Start flavours"
 end = "-- End flavours"
 
+[[items]]
+file = "~/ws/vaults/curse of strahd/.obsidian/themes/Base16/theme.css"
+template = "obsidian"
+start = "/* Start flavours */"
+end = "/* End flavours */"
+
+[[items]]
+file = "~/.config/wlogout/colors.css"
+template = "wlogout"
+rewrite = true

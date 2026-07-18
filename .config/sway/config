@@ -54,13 +54,13 @@ assign [app_id="^vesktop$"] 1
 assign [app_id="^gamescope$"] 5
 
 # Window rules
-for_window [app_id="^kitty$"] opacity 0.9
-for_window [app_id="^thunar$"] opacity 0.9
-for_window [app_id="^vesktop$"] opacity 0.9
-for_window [class="^Spotify$"] opacity 0.9
-for_window [class="^steam$"] opacity 0.9
-for_window [class="^obsidian$"] opacity 0.9
-for_window [class="^jetbrains-rider$"] opacity 0.9
+#for_window [app_id="^kitty$"] opacity 0.9
+#for_window [app_id="^thunar$"] opacity 0.9
+#for_window [app_id="^vesktop$"] opacity 0.9
+#for_window [class="^Spotify$"] opacity 0.9
+#for_window [class="^steam$"] opacity 0.9
+#for_window [class="^obsidian$"] opacity 0.9
+#for_window [class="^jetbrains-rider$"] opacity 0.9
 #for_window [app_id="^com.gabm.satty$"] floating enable ; move position center ; resize set 90ppt 90ppt
 for_window [app_id="^gamescope$"] fullscreen enable
 

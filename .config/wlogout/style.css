@@ -1,17 +1,19 @@
+@import "./colors.css";
+
 * {
   font-family: "Fira Code Nerd Font";
 }
 
 window {
-  background-color: alpha(#22273d, 0.5);
+  background-color: alpha(@base01, 0.5);
 }
 
 button {
   margin: 500px 100px;
-  color: #ffffff;
+  color: @base05;
   font-size: 30px;
-  background-color: alpha(#525866, 0.8);
-  border: 5px solid #c8c8c8;
+  background-color: alpha(@base03, 0.8);
+  border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
     0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
@@ -21,9 +23,9 @@ button {
 }
 
 button:hover {
-  color: #6bb8ff;
-  background-color: alpha(#878d96, 0.9);
-  border-color: #6bb8ff;
+  color: @base08;
+  background-color: alpha(@base08, 0.9);
+  border-color: @base08;
 }
 
 #shutdown {
