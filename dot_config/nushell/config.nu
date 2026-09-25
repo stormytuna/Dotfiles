@@ -33,6 +33,9 @@ alias gp = git push
 alias gpl = git pull
 alias gu = git reset --soft HEAD~1
 
+# chezmoi
+def cc [] { chezmoi re-add; chezmoi cd }
+
 # misc stuff
 def lg [path = "."] { ls $path | sort-by type name --ignore-case | grid --icons --color }
 def l [path = "."] { ls $path | sort-by type name --ignore-case }
