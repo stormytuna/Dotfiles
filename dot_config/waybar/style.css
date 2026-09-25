@@ -1,0 +1,70 @@
+@import "./colours.css";
+
+* {
+  font-family: "Fira Code Nerd Font";
+  font-weight: bold;
+  font-size: 12px;
+}
+
+/* TODO: Update to use colours from ./colours.css */
+
+window#waybar {
+  background: alpha(@base00, 0.7);
+}
+
+tooltip {
+  background: @base02;
+  border: @base01 solid 2px;
+  border-radius: 8px;
+}
+
+.module {
+  padding: 2px 10px;
+  color: @base06;
+}
+
+#custom-shutdown {
+  color: @base08;
+  border-color: @base08;
+}
+
+#pulseaudio {
+  color: @base0A;
+  border-color: @base0A
+}
+
+#bluetooth {
+  color: @base0D;
+  border-color: @base0D;
+}
+
+#cpu {
+  color: @base0B;
+  border-color: @base0B;
+}
+
+#custom-gpu {
+  color: @base0E;
+  border-color: @base0E;
+}
+
+#memory {
+  color: @base0A;
+  border-color: @base0A;
+}
+
+#network {
+  color: @base09;
+  border-color: @base09;
+}
+
+#clock {
+  color: @base08;
+  border-color: @base08;
+}
+
+#custom-notifications {
+  color: @base0C;
+  border-color: @base0C;
+}
+

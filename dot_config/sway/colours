@@ -1,0 +1,6 @@
+client.focused #6bb8ff #171726 #ffffff #6bb8ff #6bb8ff
+client.focused_inactive #878d96 #171726 #ffffff #878d96 #878d96
+client.unfocused #878d96 #171726 #ffffff #878d96 #878d96
+client.urgent #fa7883 #171726 #ffffff #fa7883 #fa7883
+client.placeholder #878d96 #171726 #ffffff #878d96 #878d96
+client.background #171726

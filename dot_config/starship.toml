@@ -1,0 +1,79 @@
+add_newline = false
+format = "$directory$git_branch$git_status$fill$cmd_duration$status$time$line_break$character"
+palette = "base16"
+
+[character]
+error_symbol = "[ >](bold red)"
+success_symbol = "[ >](bold green)"
+
+[cmd_duration]
+format = "[ took $duration ]($style)"
+style = "fg:#ffc387"
+
+[directory]
+format = "[ $path ]($style)"
+style = "fg:#6bb8ff"
+
+[fill]
+symbol = " "
+
+[git_branch]
+format = "[ $symbol$branch ]($style)"
+style = "fg:#98c379"
+
+[git_status]
+format = "[($all_status$ahead_behind )]($style)"
+style = "fg:#98c379"
+
+[status]
+disabled = false
+format = "[ $status ($common_meaning$signal_name) ]($style)"
+style = "fg:#fa7883"
+
+[time]
+disabled = false
+format = "[ $time ]($style)"
+style = "fg:#b3684f"
+
+# Start flavours
+# Base16 Atelier Plateau - kitty color config
+# Scheme by Bram de Haan (http://atelierbramdehaan.nl)
+
+[palettes.base16]
+base00 = "#"
+base01 = "#"
+base02 = "#"
+base03 = "#"
+base04 = "#"
+base05 = "#"
+base06 = "#"
+base07 = "#"
+base08 = "#"
+base09 = "#"
+base0A = "#"
+base0B = "#"
+base0C = "#"
+base0D = "#"
+base0E = "#"
+base0F = "#"
+black = "#"
+blue = "#"
+bright-black = "#"
+bright-blue = "#"
+bright-cyan = "#"
+bright-green = "#"
+bright-magenta = "#"
+bright-purple = "#"
+bright-red = "#"
+bright-white = "#"
+bright-yellow = "#"
+brown = "#"
+cyan = "#"
+green = "#"
+magenta = "#"
+orange = "#"
+purple = "#"
+red = "#"
+white = "#"
+yellow = "#"
+# End flavours

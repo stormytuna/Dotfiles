@@ -1,0 +1,24 @@
+{
+  "action": "systemctl poweroff",
+  "keybind": "s",
+  "label": "shutdown",
+  "text": ""
+}
+{
+  "action": "systemctl reboot",
+  "keybind": "r",
+  "label": "reboot",
+  "text": ""
+}
+{
+  "action": "swaymsg exit",
+  "keybind": "l",
+  "label": "logout",
+  "text": ""
+}
+{
+  "action": "systemctl reboot --firmware-setup",
+  "keybind": "f",
+  "label": "firmware",
+  "text": ""
+}

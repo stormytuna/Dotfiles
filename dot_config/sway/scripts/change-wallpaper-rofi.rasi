@@ -1,0 +1,45 @@
+* {
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+}
+
+window {
+  location: north;
+  background-color: rgba(0,0,0,0.8);
+  fullscreen: true;
+}
+
+mainbox {
+  children: [listview];
+}
+
+listview {
+  border: none;
+  padding: 10px 200px; 
+  spacing: 14px;
+  columns: 4;
+  scrollbar: false;
+  flow: horizontal;
+  children: [element-icon];
+}
+
+element selected normal, element selected active {
+  border: 0px 0px 1px 0px;
+  border-color: #C9A0DC;
+  background-color: transparent;
+
+  /* I promise you this looks sick as fuck */
+  background-image: linear-gradient(to top, #C9A0DC, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent);
+}
+
+element-icon {
+  size: 40%;
+  vertical-align: 0.9;
+}
+
+element normal.normal, element normal.active, element alternate.normal, element alternate.active {
+  background-color: transparent;
+}
+
