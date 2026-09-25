@@ -10,7 +10,7 @@ then
 fi
 
 case "$DUNST_APP_NAME" in
-  "discord"|"vencord"|"vesktop")
+  ("discord"|"vesktop")
     play ~/.config/dunst/sounds/message-new-instant.oga
     exit 0
 esac
