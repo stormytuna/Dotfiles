@@ -4,6 +4,8 @@ $env.config.show_banner = false
 $env.config.buffer_editor = "nvim"
 $env.config.table.mode = "thin"
 
+$env.editor = "nvim"
+
 # NixOS update stuff
 def update-system [] {
   cd ~/.nixos
