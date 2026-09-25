@@ -1,5 +1,6 @@
 include /etc/sway/config.d/*
 include ./colours
+include ./monitors
 
 # Startup
 exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
@@ -23,31 +24,13 @@ input "*" {
 
 floating_modifier super
 
-# Outputs
-output "DP-1" {
-  pos 0 240
-  res 1920x1080@144Hz
-  transform 270
-}
-
-output "DP-3" {
-  pos 4920 361
-  res 2560x1440@120.02Hz
-}
-
-output "HDMI-A-1" {
-  pos 1080 0
-  res 3840x2160@120Hz
-  adaptive_sync on
-}
-
 # Workspaces
-workspace "1" output "DP-1"
-workspace "3" output "DP-2"
-workspace "2" output "HDMI-A-1"
-workspace "4" output "HDMI-A-1"
-workspace "5" output "HDMI-A-1"
-workspace "6" output "HDMI-A-1"
+workspace "1" output $left
+workspace "3" output $right
+workspace "2" output $main
+workspace "4" output $main
+workspace "5" output $main
+workspace "6" output $main
 
 # Assignments
 assign [class="^discord$"] 1
@@ -107,9 +90,9 @@ bindsym super+g fullscreen toggle
 bindsym super+t exec kitty
 bindsym super+r exec pkill fuzzel || fuzzel
 bindsym super+e exec thunar
-bindsym super+alt+ctrl+shift+x focus output HDMI-A-1; exec wlogout --protocol layer-shell --buttons-per-row 4
+bindsym super+alt+ctrl+shift+x focus output $main; exec wlogout --protocol layer-shell --buttons-per-row 4
 bindsym super+alt+ctrl+shift+c exec killall waybar && waybar
-bindsym super+alt+ctrl+shift+w focus output HDMI-A-1; exec ~/.config/sway/scripts/change-wallpaper.sh
+bindsym super+alt+ctrl+shift+w focus output $main; exec ~/.config/sway/scripts/change-wallpaper.sh
 bindsym super+y exec ~/.config/sway/scripts/send-keypress.sh "app_id=\"vesktop\"" -M ctrl -M shift -k m -m ctrl -m shift
 bindsym super+shift+tab exec ~/.config/sway/scripts/toggle-stacking.sh
 
