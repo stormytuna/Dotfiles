@@ -9,6 +9,7 @@ return {
 	  base0C = '#5485b6', base0D = '#7272ca', base0E = '#8464c4', base0F = '#bd5187'
 	  -- End flavours
 	})
+    require('base16-colorscheme').with_config({})
   end,
   lazy = false,
 }

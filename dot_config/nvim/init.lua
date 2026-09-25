@@ -52,6 +52,7 @@ vim.o.signcolumn = 'yes'
 vim.o.swapfile = false
 vim.o.winborder = 'single'
 vim.o.scrolloff = 10
+vim.o.showcmdloc='statusline'
 
 vim.o.ignorecase = true
 vim.o.smartcase = true
@@ -75,10 +76,10 @@ vim.keymap.set('n', '<leader>ff', '<cmd>Telescope find_files<cr>')
 vim.keymap.set('n', '<leader>fg', '<cmd>Telescope live_grep<cr>')
 vim.keymap.set('n', '<leader>fd', '<cmd>Telescope diagnostics<cr>')
 vim.keymap.set('n', '<leader>fr', '<cmd>Telescope resume<cr>')
+vim.keymap.set('n', '<leader>fu', '<cmd>Telescope lsp_references<cr>')
+vim.keymap.set('n', '<leader>fi', '<cmd>Telescope lsp_implementations<cr>')
 
 vim.keymap.set('n', '<leader>r', vim.lsp.buf.rename)
-vim.keymap.set('n', '<leader>lr', vim.lsp.buf.references)
-vim.keymap.set('n', '<leader>li', vim.lsp.buf.implementation)
 vim.keymap.set('n', '<leader>ld', vim.lsp.buf.type_definition)
 vim.keymap.set('n', '<leader>la', vim.lsp.buf.code_action)
 vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
@@ -92,6 +93,8 @@ vim.keymap.set('n', '<leader>hc', function() harpoon:list():clear() end)
 vim.keymap.set('n', '<C-e>', function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
 vim.keymap.set('n', '<C-h>', function() harpoon.list():select(1) end)
 vim.keymap.set('n', '<C-t>', function() harpoon.list():select(2) end)
+
+vim.keymap.set('n', 'q', 'q', {noremap = true, silent = true})
 
 -- Autocommands
 vim.api.nvim_create_autocmd('TextYankPost', {
