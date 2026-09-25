@@ -7,7 +7,7 @@ $env.editor = "nvim"
 
 # NixOS update stuff
 def update-system [] {
-  cd ~/.nixos
+  cd ~/nixos
   git add .
   nh os switch . -H (hostname) -- --max-jobs 3 --accept-flake-config
 
@@ -20,7 +20,7 @@ def update-system [] {
   cd -
 }
 
-def update-flake [] { sudo nix flake update --flake ~/.nixos; update-system }
+def update-flake [] { sudo nix flake update --flake ~/nixos; update-system }
 
 alias us = update-system
 alias uf = update-flake
@@ -39,7 +39,7 @@ def l [path = "."] { ls $path | sort-by type name --ignore-case }
 def ll [path = "."] { ls --long $path | sort-by type name --ignore-case | select mode user group type name size created accessed modified }
 def la [path = "."] { ls --long --all $path | sort-by type name --ignore-case | select mode user group type name size created accessed modified }
 
-def qvf [] { let owd = pwd; cd ~/.nixos; nvim .; cd $owd }
+def qvf [] { let owd = pwd; cd ~/nixos; nvim .; cd $owd }
 def qvt [] { let owd = pwd; cd ~/ws/src/os/tModLoader/src/tModLoader; nvim .; cd $owd }
 def qvv [] { let owd = pwd; cd ~/.config/nvim; nvim .; cd $owd }
 
