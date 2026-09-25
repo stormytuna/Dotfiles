@@ -2,6 +2,8 @@
 
 These are miscellaneous configuration files for all the programs I use regularly. See [my NixOS configuration](https://github.com/stormytuna/NixOS) for the backbone that supports this.
 
+I manage dotfiles with [chezmoi](https://www.chezmoi.io/)
+
 ## What I use and why
 
 - **Window Manager:** [Sway](https://github.com/swaywm/sway). I love tiling window managers and Sway is the most stable one I've used. I use the [SwayFX](https://github.com/WillPower3309/swayfx) fork for blurred backgrounds and dropshadows (and hopefully transition anims soon!)
