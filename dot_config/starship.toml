@@ -1,5 +1,5 @@
 add_newline = false
-format = "$directory$git_branch$git_status$fill$cmd_duration$status$time$line_break$character"
+format = "$line_break$directory$git_branch$git_status$fill$cmd_duration$status$time$line_break$character"
 palette = "base16"
 
 [character]
