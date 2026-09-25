@@ -34,6 +34,8 @@ alias gpl = git pull
 alias gu = git reset --soft HEAD~1
 
 # chezmoi
+alias ca = chezmoi apply
+alias cu = chezmoi update
 def cc [] { chezmoi re-add; chezmoi cd }
 
 # misc stuff
