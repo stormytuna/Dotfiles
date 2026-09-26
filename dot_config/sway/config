@@ -2,19 +2,6 @@ include /etc/sway/config.d/*
 include ./colours
 include ./monitors
 
-# Startup
-exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
-exec blueman-applet
-exec nm-applet
-exec dunst
-exec steam -silent -forcedesktopscaling=1.75
-exec sleep 2 && awww-daemon && sleep 2 && awww img ~/.config/sway/current-wallpaper --transition-duration 2 --transition-type any --transition-step 255 --transition-fps 120
-#exec sleep 5 && vesktop
-exec sleep 5 && discord
-exec sleep 5 && qbittorrent
-exec waybar
-exec syncthing serve --no-browser --allow-newer-config
-
 # Input
 input "*" {
   accel_profile flat
@@ -98,7 +85,7 @@ bindsym super+y exec ~/.config/sway/scripts/send-keypress.sh "app_id=\"vesktop\"
 bindsym super+shift+tab exec ~/.config/sway/scripts/toggle-stacking.sh
 
 # Decoration
-font pango:Noto Sans 10.000000
+font Fira Code Nerd Font 10.0
 gaps inner 8
 gaps outer 12
 default_border pixel 2
