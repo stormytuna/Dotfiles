@@ -45,16 +45,21 @@ return {
     lualine.setup({
       options = {
         theme = theme,
-        component_separators = {left = '|', right = '|'},
-        section_separators = {left = '', right = ''},
+        component_separators = {left = '', right = ''},
+        section_separators = {left = '▌', right = '▐'},
       },
       sections = {
         lualine_a = {'mode'},
-        lualine_b = {'branch', 'diff', 'diagnostics'},
-        lualine_c = {'filename', 'lsp_status', '%S', macroComponent},
-        lualine_x = {'filetype', 'searchcount', 'selectioncount'},
+        lualine_c = {{'diagnostics', always_visible = true}},
+        lualine_b = {{'lsp_status', icon = {'󰒓'}, symbols = {done = '󰄬'}}, '%S', macroComponent},
+        lualine_x = {'selectioncount'},
         lualine_y = {'progress'},
         lualine_z = {'location'},
+      },
+      tabline = {
+        lualine_a = {'filename'},
+        lualine_b = {'tabs'},
+        lualine_c = {'branch', 'diff'},
       }
     })
   end,
