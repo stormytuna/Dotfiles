@@ -57,3 +57,8 @@ end = "/* End flavours */"
 file = "~/.config/wlogout/colors.css"
 template = "wlogout"
 rewrite = true
+
+[[items]]
+file = "~/.config/Vencord/themes/flavour.css"
+template = "vencord"
+rewrite = true
