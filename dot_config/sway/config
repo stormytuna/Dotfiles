@@ -34,7 +34,7 @@ workspace "5" output $main
 workspace "6" output $main
 
 # Assignments
-assign [class="^discord$"] 1
+assign [app_id="^discord$"] 1
 assign [app_id="^vesktop$"] 1
 assign [app_id="^gamescope$"] 5
 
