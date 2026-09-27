@@ -26,6 +26,7 @@ alias us = update-system
 alias uf = update-flake
 
 # git
+alias g = lazygit
 alias gs = git status
 alias gc = git commit --message
 alias ga = git add --all
