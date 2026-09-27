@@ -108,45 +108,11 @@ vim.keymap.set('n', '<C-e>', function() harpoon.ui:toggle_quick_menu(harpoon:lis
 vim.keymap.set('n', '<C-h>', function() harpoon.list():select(1) end)
 vim.keymap.set('n', '<C-t>', function() harpoon.list():select(2) end)
 
---local term = require('toggleterm.terminal').Terminal:new({
---  direction = 'horizontal',
---  on_open = function (t)
---    vim.cmd('startinsert')
---  end
---})
-
---vim.keymap.set('n', '<leader>tt', function() term:open() end, {desc = 'terminal'})
---vim.keymap.set('t', '<esc>', [[<c-\><c-n><c-w>p]])
---vim.keymap.set('t', '<c-esc>', '<cmd>ToggleTerm<cr>')
---vim.keymap.set('t', '<c-h>', '<cmd>wincmd h<cr>', {buffer = 0})
---vim.keymap.set('t', '<c-j>', '<cmd>wincmd j<cr>', {buffer = 0})
---vim.keymap.set('t', '<c-k>', '<cmd>wincmd k<cr>', {buffer = 0})
---vim.keymap.set('t', '<c-l>', '<cmd>wincmd l<cr>', {buffer = 0})
---
---local lazygit = require('toggleterm.terminal').Terminal:new({
---  cmd = "lazygit",
---  dir = "git_dir",
---  direction = "float",
---  float_opts = {
---    border = "single",
---  },
---  on_open = function(t)
---    vim.cmd("startinsert!")
---    vim.api.nvim_buf_set_keymap(t.bufnr, "n", "q", "<cmd>close<CR>", {noremap = true, silent = true})
---  end,
---  on_close = function(t)
---    vim.cmd("startinsert!")
---  end,
---})
---
---function Lazygit()
---  lazygit:toggle()
---end
+vim.api.nvim_set_keymap("n", "<leader>g", '<cmd>LazyGit<cr>', {desc = "lazygit"})
 
 local betterTerm = require('betterTerm')
 vim.keymap.set({'n', 't'}, '<c-;>', function() betterTerm.open() end, {desc = 'terminal'})
 
-vim.api.nvim_set_keymap("n", "<leader>g", '<cmd>LazyGit<cr>', {desc = "lazygit"})
 
 -- Autocommands
 vim.api.nvim_create_autocmd('TextYankPost', {
@@ -157,20 +123,3 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
--- TODO: Fix? Remove? idk
---vim.api.nvim_create_autocmd('LspAttach', {
---	group = vim.api.nvim_create_augroup('autoformat', {}),
---	desc = 'Auto format when saving',
---	callback = function(args)
---		if not client:supports_method('textDocument/willSaveWaitUntil')
---				and client:supports_method('textDocument/formatting') then
---			vim.api.nvim_create_autocmd('BufWritePre', {
---				group = vim.api.nvim.create_augroup('autoformat', { clear = false }),
---				buffer = args.buf,
---				callback = function()
---					vim.lsp.buf.format({ bufnr = args.buf, timeout_ms = 1000 })
---				end
---			})
---		end
---	end,
---})
