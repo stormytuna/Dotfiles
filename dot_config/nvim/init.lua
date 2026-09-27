@@ -63,7 +63,7 @@ vim.o.smartcase = true
 --})
 
 -- Keymaps
-vim.keymap.set('n', '<esc>', '<esc>:nohlsearch<cr>:helpclose<cr>')
+--vim.keymap.set('n', '<esc>', '<esc>:nohlsearch<cr>:helpclose<cr>')
 vim.keymap.set('n', 'U', '<c-r>')
 vim.keymap.set('n', '<leader>o', ':update<cr>:source<cr>', {desc = 'reload config'})
 vim.keymap.set('n', '<leader>w', ':write<cr>', {desc = 'write'})
@@ -93,6 +93,43 @@ vim.keymap.set('n', '<leader>hc', function() harpoon:list():clear() end, {desc =
 vim.keymap.set('n', '<C-e>', function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
 vim.keymap.set('n', '<C-h>', function() harpoon.list():select(1) end)
 vim.keymap.set('n', '<C-t>', function() harpoon.list():select(2) end)
+
+--local term = require('toggleterm.terminal').Terminal:new({
+--  direction = 'horizontal',
+--  on_open = function (t)
+--    vim.cmd('startinsert')
+--  end
+--})
+
+--vim.keymap.set('n', '<leader>tt', function() term:open() end, {desc = 'terminal'})
+--vim.keymap.set('t', '<esc>', [[<c-\><c-n><c-w>p]])
+--vim.keymap.set('t', '<c-esc>', '<cmd>ToggleTerm<cr>')
+--vim.keymap.set('t', '<c-h>', '<cmd>wincmd h<cr>', {buffer = 0})
+--vim.keymap.set('t', '<c-j>', '<cmd>wincmd j<cr>', {buffer = 0})
+--vim.keymap.set('t', '<c-k>', '<cmd>wincmd k<cr>', {buffer = 0})
+--vim.keymap.set('t', '<c-l>', '<cmd>wincmd l<cr>', {buffer = 0})
+--
+--local lazygit = require('toggleterm.terminal').Terminal:new({
+--  cmd = "lazygit",
+--  dir = "git_dir",
+--  direction = "float",
+--  float_opts = {
+--    border = "single",
+--  },
+--  on_open = function(t)
+--    vim.cmd("startinsert!")
+--    vim.api.nvim_buf_set_keymap(t.bufnr, "n", "q", "<cmd>close<CR>", {noremap = true, silent = true})
+--  end,
+--  on_close = function(t)
+--    vim.cmd("startinsert!")
+--  end,
+--})
+--
+--function Lazygit()
+--  lazygit:toggle()
+--end
+
+vim.api.nvim_set_keymap("n", "<leader>g", '<cmd>LazyGit<cr>', {desc = "lazygit"})
 
 -- Autocommands
 vim.api.nvim_create_autocmd('TextYankPost', {
