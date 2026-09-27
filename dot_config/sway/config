@@ -1,6 +1,7 @@
 include /etc/sway/config.d/*
 include ./colours
 include ./monitors
+include ./init
 
 # Input
 input "*" {
