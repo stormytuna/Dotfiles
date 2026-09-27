@@ -73,6 +73,19 @@ vim.keymap.set('n', '<leader>e', '<cmd>Oil --float<cr>', {desc = 'oil'})
 vim.keymap.set('n', '<c-d>', '<c-d>zz')
 vim.keymap.set('n', '<c-u>', '<c-u>zz')
 
+vim.keymap.set('n', '<a-h>', '<c-w>h')
+vim.keymap.set('n', '<a-m>', '<c-w>j')
+vim.keymap.set('n', '<a-u>', '<c-w>k')
+vim.keymap.set('n', '<a-j>', '<c-w>l')
+vim.keymap.set('i', '<a-h>', [[<c-\><c-N><c-w>h]])
+vim.keymap.set('i', '<a-m>', [[<c-\><c-N><c-w>j]])
+vim.keymap.set('i', '<a-u>', [[<c-\><c-N><c-w>k]])
+vim.keymap.set('i', '<a-j>', [[<c-\><c-N><c-w>l]])
+vim.keymap.set('t', '<a-h>', [[<c-\><c-N><c-w>h]])
+vim.keymap.set('t', '<a-m>', [[<c-\><c-N><c-w>j]])
+vim.keymap.set('t', '<a-u>', [[<c-\><c-N><c-w>k]])
+vim.keymap.set('t', '<a-j>', [[<c-\><c-N><c-w>l]])
+
 vim.keymap.set('n', '<leader>ff', '<cmd>Telescope find_files<cr>', {desc = 'files'})
 vim.keymap.set('n', '<leader>fg', '<cmd>Telescope live_grep<cr>', {desc = 'grep'})
 vim.keymap.set('n', '<leader>fd', '<cmd>Telescope diagnostics<cr>', {desc = 'diagnostics'})
@@ -129,6 +142,9 @@ vim.keymap.set('n', '<C-t>', function() harpoon.list():select(2) end)
 --function Lazygit()
 --  lazygit:toggle()
 --end
+
+local betterTerm = require('betterTerm')
+vim.keymap.set({'n', 't'}, '<c-;>', function() betterTerm.open() end, {desc = 'terminal'})
 
 vim.api.nvim_set_keymap("n", "<leader>g", '<cmd>LazyGit<cr>', {desc = "lazygit"})
 
