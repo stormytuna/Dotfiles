@@ -5,10 +5,16 @@
   origin = "top-center"
   offset = "(0, 100)"
   transparency = 10
-  monitor = "DP-1"
   corner_radius = 0
   frame_width = 2
   show_indicators = no
+
+{{- if eq .chezmoi.hostname "eva-unit-01" }}
+  monitor = "DP-1"
+{{- end }}
+{{- if eq .chezmoi.hostname "eva-unit-02" }}
+  monitor = "DP-2"
+{{- end }}
 
   mouse_left_click = "do_action"
   mouse_middle_click = "none"
