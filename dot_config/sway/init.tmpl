@@ -12,3 +12,6 @@ exec steam -silent -forcedesktopscaling=1.75
 exec sleep 5 && discord
 exec sleep 5 && qbittorrent
 {{- end }}
+{{- if eq .chezmoi.hostname "eva-unit-02" }}
+exec slack
+{{- end }}
