@@ -11,7 +11,7 @@
   "text": ""
 }
 {
-  "action": "swaymsg exit",
+  "action": "swaylock",
   "keybind": "l",
   "label": "logout",
   "text": ""
