@@ -13,6 +13,21 @@
     "clock"
   ],
 {{- end }}
+{{- if eq .chezmoi.hostname "eva-unit-02" }}
+  "output": ["DP-2"],
+  "modules-left": [
+    "tray",
+    "pulseaudio",
+    "battery",
+  ],
+  "modules-center": [],
+  "modules-right": [
+    "cpu",
+    "custom/gpu",
+    "memory",
+    "clock"
+  ],
+{{- end }}
   "layer": "top",
   "position": "top",
   "mode": "dock",
