@@ -20,3 +20,25 @@ output "HDMI-A-1" {
   adaptive_sync on
 }
 {{- end }}
+
+{{- if eq .chezmoi.hostname "eva-unit-02" }}
+#set $left "DP-2"
+set $main "DP-1"
+#set $right "eDP-1"
+
+output "DP-2" {
+  pos 0 0
+  res 2560x1440@74.971Hz
+  transform 270
+}
+
+output "DP-1" {
+  pos 1440 0
+  res 2560x1440@74.971Hz
+}
+
+output "eDP-1" {
+  pos 4000 700
+  res 1920x1200@59.950Hz
+}
+{{- end }}
