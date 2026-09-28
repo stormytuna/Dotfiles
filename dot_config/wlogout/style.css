@@ -8,6 +8,8 @@ window {
   background-color: alpha(@base01, 0.5);
 }
 
+/* TODO: This looks mid on work computer */
+
 button {
   margin: 500px 100px;
   color: @base05;
