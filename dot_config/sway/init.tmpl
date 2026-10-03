@@ -6,6 +6,7 @@ exec nm-applet
 exec dunst
 exec sleep 2 && awww-daemon && sleep 2 && awww img ~/.config/sway/current-wallpaper --transition-duration 2 --transition-type any --transition-step 255 --transition-fps 120
 exec waybar
+exec wl-paste --watch cliphist store
 exec syncthing serve --no-browser --allow-newer-config
 
 {{- if eq .chezmoi.hostname "eva-unit-01" }}
