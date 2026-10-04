@@ -66,5 +66,8 @@ $env.PROMPT_INDICATOR_VI_INSERT = ": "
 $env.PROMPT_INDICATOR_VI_NORMAL = "〉"
 $env.PROMPT_MULTILINE_INDICATOR = "::: "
 
-# Enable zoxide
+# enable carapace
+source ./carapace.nu
+
+# enable zoxide
 source ./zoxide.nu
