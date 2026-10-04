@@ -47,13 +47,14 @@ Don't! You can poke around my configs and steal stuff you like, but this isn't i
 
 ## What it looks like
 
-Colours and background subject to change!
-
 My left monitor (vertical, 1080p, 16:9).
 
-<img width="1079" height="1920" alt="image" src="https://github.com/user-attachments/assets/b99e9668-9edb-4354-abe5-f03cbec39747" />
+<img width="1079" height="1920" alt="image" src="https://github.com/user-attachments/assets/aad46ff9-3f34-4716-a004-56f8b81ef01d" />
 
-<img width="3840" height="2160" alt="image" src="https://github.com/user-attachments/assets/10f63446-62d5-4b58-91e2-7b93c82320cc" />
+My main monitor (horizontal, 4k, 16:9)
 
-<img width="3840" height="2160" alt="image" src="https://github.com/user-attachments/assets/9abd38a6-dc94-4319-bb97-8cc593ec911a" />
+(Can you guess what my favourite game is right now?)
 
+<img width="3840" height="2160" alt="image" src="https://github.com/user-attachments/assets/4e203f6b-611b-4208-828b-fa765ba3be63" />
+
+<img width="3840" height="2160" alt="image" src="https://github.com/user-attachments/assets/22817b24-7a47-4536-8fc7-2c9050762600" />
