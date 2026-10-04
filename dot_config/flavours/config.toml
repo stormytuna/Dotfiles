@@ -62,3 +62,8 @@ rewrite = true
 file = "~/.config/Vencord/themes/flavour.css"
 template = "vencord"
 rewrite = true
+
+[[items]]
+file = "~/.config/nushell/colors.nu"
+template = "nushell"
+rewrite = true

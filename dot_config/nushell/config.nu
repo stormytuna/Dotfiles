@@ -71,3 +71,6 @@ source ./carapace.nu
 
 # enable zoxide
 source ./zoxide.nu
+
+# import color scheme
+source ./colors.nu
