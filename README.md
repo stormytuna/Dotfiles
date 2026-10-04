@@ -12,7 +12,7 @@ I manage dotfiles with [chezmoi](https://www.chezmoi.io/). After using it for so
 
 - **Notification Daemon:** [Dunst](https://github.com/dunst-project/dunst). A notification daemon is necessary when running a window manager - Dunst is the first one I found that let me output notifications to a specific output. It also supports running scripts when notifications are received, allowing me to configure notification sounds very easily.
 
-- **Logout Menu:** [wlogout](https://github.com/ArtsyMacaw/wlogout). This is a great tool, after I configured it to look pretty. My configuration uses with [swaylock](https://github.com/swaywm/swaylock) for locking my screen.
+- **Logout Menu:** [wlogout](https://github.com/ArtsyMacaw/wlogout) and [swaylock](https://github.com/swaywm/swaylock). These are great tools, once configured to look pretty.
 
 - **Terminal Emulator:** [Kitty](https://github.com/kovidgoyal/kitty). I started with Kitty and haven't experimented much, only dipping my toes into [Alacritty](https://github.com/alacritty/alacritty) one time. I'd like to try [tmux](https://github.com/tmux/tmux) but I am in no rush.
 
