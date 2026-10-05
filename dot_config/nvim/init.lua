@@ -114,6 +114,8 @@ vim.api.nvim_set_keymap("n", "<leader>g", '<cmd>LazyGit<cr>', {desc = "lazygit"}
 local betterTerm = require('betterTerm')
 vim.keymap.set({'n', 't'}, '<c-;>', function() betterTerm.open() end, {desc = 'terminal'})
 
+vim.keymap.set('v', '<leader>ss', ":ScreenshotSelection<cr>")
+
 
 -- Autocommands
 vim.api.nvim_create_autocmd('TextYankPost', {
