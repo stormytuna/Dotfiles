@@ -67,3 +67,9 @@ rewrite = true
 file = "~/.config/nushell/colors.nu"
 template = "nushell"
 rewrite = true
+
+[[items]]
+file = "~/.config/sway/colours"
+template = "sway"
+hook = "swaymsg reload"
+rewrite = true
