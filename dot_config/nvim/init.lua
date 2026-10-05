@@ -13,6 +13,7 @@ vim.lsp.enable({
   'cssls',
   'zls',
   'ts_ls',
+  'angularls'
 })
 
 vim.lsp.config['lua_ls'] = {
