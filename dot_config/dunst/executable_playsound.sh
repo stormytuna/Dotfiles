@@ -10,8 +10,15 @@ then
 fi
 
 case "$DUNST_APP_NAME" in
-  ("discord"|"vesktop"|"Slack")
+  ("discord"|"vesktop")
     play ~/.config/dunst/sounds/message-new-instant.oga
+    exit 0
+esac
+
+case "$DUNST_APP_NAME" in
+  ("Slack")
+    # slack has its own notification
+    #   and i don't hate it
     exit 0
 esac
 
