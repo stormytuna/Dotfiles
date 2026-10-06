@@ -64,8 +64,7 @@ vim.o.smartcase = true
 --})
 
 -- Keymaps
---vim.keymap.set('n', '<esc>', '<esc>:nohlsearch<cr>:helpclose<cr>')
-vim.keymap.set('n', '<cr>', ':noh<cr><cr>')
+vim.keymap.set('n', '<esc>', ':nohlsearch<cr>:helpclose<cr><esc>')
 vim.keymap.set('n', 'U', '<c-r>')
 vim.keymap.set('n', '<leader>o', ':update<cr>:source<cr>', {desc = 'reload config'})
 vim.keymap.set('n', '<leader>w', ':write<cr>', {desc = 'write'})
