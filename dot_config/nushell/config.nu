@@ -20,7 +20,23 @@ def update-system [] {
   cd -
 }
 
-def update-flake [] { sudo nix flake update --flake ~/nixos; update-system }
+def update-flake [] { 
+    let owd = pwd
+    cd ~/nixos
+
+    sudo nix flake update --flake .
+
+    let flakeLock = "./flake.lock"
+    let hasChanged = (git status --porcelain -- $flakeLock | str trim | is-not-empty)
+    if $hasChanged {
+        git add -- $flakeLock
+        git commit -m "chore: update flake" -- $flakeLock
+    }
+
+    cd $owd
+
+    update-system 
+}
 
 def qvf [] { let owd = pwd; cd ~/nixos; nvim .; cd $owd }
 def qvt [] { let owd = pwd; cd ~/ws/src/os/tModLoader/src/tModLoader; nvim .; cd $owd }
