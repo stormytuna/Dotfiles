@@ -114,3 +114,5 @@ shadow_blur_radius 40
 
 layer_effects "logout_dialog" blur enable
 layer_effects "waybar" blur enable
+
+animation_duration_ms 200
