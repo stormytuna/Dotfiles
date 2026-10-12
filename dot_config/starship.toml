@@ -1,5 +1,5 @@
 add_newline = false
-format = "$line_break$directory$git_branch$git_status$fill$cmd_duration$status$time$line_break$character"
+format = "$line_break$directory$git_branch$git_status$cmd_duration$status$line_break$character"
 palette = "base16"
 
 [character]
@@ -8,72 +8,78 @@ success_symbol = "[ >](bold green)"
 
 [cmd_duration]
 format = "[ took $duration ]($style)"
-style = "fg:#ffc387"
+style = "fg:purple"
 
 [directory]
 format = "[ $path ]($style)"
-style = "fg:#6bb8ff"
+style = "fg:magenta"
 
 [fill]
 symbol = " "
 
 [git_branch]
-format = "[ $symbol$branch ]($style)"
-style = "fg:#98c379"
+format = "[ $branch ]($style)"
+style = "fg:cyan"
 
 [git_status]
 format = "[($all_status$ahead_behind )]($style)"
-style = "fg:#98c379"
+style = "fg:cyan"
+conflicted = "‼"
+ahead = ""
+behind = ""
+diverged = ""
+renamed = ""
+deleted = "-"
 
 [status]
 disabled = false
 format = "[ $status ($common_meaning$signal_name) ]($style)"
-style = "fg:#fa7883"
+style = "fg:red"
 
 [time]
 disabled = false
 format = "[ $time ]($style)"
-style = "fg:#b3684f"
+style = "fg:orange"
 
 # Start flavours
 # Base16 Atelier Plateau - kitty color config
 # Scheme by Bram de Haan (http://atelierbramdehaan.nl)
 
 [palettes.base16]
-base00 = "#"
-base01 = "#"
-base02 = "#"
-base03 = "#"
-base04 = "#"
-base05 = "#"
-base06 = "#"
-base07 = "#"
-base08 = "#"
-base09 = "#"
-base0A = "#"
-base0B = "#"
-base0C = "#"
-base0D = "#"
-base0E = "#"
-base0F = "#"
-black = "#"
-blue = "#"
-bright-black = "#"
-bright-blue = "#"
-bright-cyan = "#"
-bright-green = "#"
-bright-magenta = "#"
-bright-purple = "#"
-bright-red = "#"
-bright-white = "#"
-bright-yellow = "#"
-brown = "#"
-cyan = "#"
-green = "#"
-magenta = "#"
-orange = "#"
-purple = "#"
-red = "#"
-white = "#"
-yellow = "#"
+base00 = "#1b1818"
+base01 = "#292424"
+base02 = "#585050"
+base03 = "#655d5d"
+base04 = "#7e7777"
+base05 = "#8a8585"
+base06 = "#e7dfdf"
+base07 = "#f4ecec"
+base08 = "#ca4949"
+base09 = "#b45a3c"
+base0A = "#a06e3b"
+base0B = "#4b8b8b"
+base0C = "#5485b6"
+base0D = "#7272ca"
+base0E = "#ca4949"
+base0F = "#bd5187"
+black = "#1b1818"
+blue = "#7272ca"
+bright-black = "#1b1818"
+bright-blue = "#7272ca"
+bright-cyan = "#5485b6"
+bright-green = "#4b8b8b"
+bright-magenta = "#8464c4"
+bright-purple = "#8464c4"
+bright-red = "#ca4949"
+bright-white = "#8a8585"
+bright-yellow = "#a06e3b"
+brown = "#bd5187"
+cyan = "#5485b6"
+green = "#4b8b8b"
+magenta = "#8464c4"
+orange = "#b45a3c"
+purple = "#8464c4"
+red = "#ca4949"
+white = "#8a8585"
+yellow = "#a06e3b"
 # End flavours
