@@ -4,11 +4,11 @@ return {
     render = "wrapped-compact",
     stages = "static",
     icons = {
-      DEBUG = "DEBUG | ",
-      ERROR = "ERROR | ",
-      INFO = "INFO | ",
-      TRACE = "TRACE | ",
-      WARN = "WARN | ",
+      DEBUG = "DEBUG:",
+      ERROR = "ERROR:",
+      INFO = "INFO:",
+      TRACE = "TRACE:",
+      WARN = "WARN:",
     }
   }
 }
