@@ -90,8 +90,9 @@ vim.keymap.set('n', '<leader>ff', '<cmd>Telescope find_files<cr>', {desc = 'file
 vim.keymap.set('n', '<leader>fg', '<cmd>Telescope live_grep<cr>', {desc = 'grep'})
 vim.keymap.set('n', '<leader>fd', '<cmd>Telescope diagnostics<cr>', {desc = 'diagnostics'})
 vim.keymap.set('n', '<leader>fr', '<cmd>Telescope resume<cr>', {desc = 'resume'})
-vim.keymap.set('n', '<leader>fu', '<cmd>Telescope lsp_references<cr>', {desc = 'references'})
-vim.keymap.set('n', '<leader>fi', '<cmd>Telescope lsp_implementations<cr>', {desc = 'implementation'})
+vim.keymap.set('n', '<leader>fu', '<cmd>Telescope lsp_references<cr>', {desc = 'usages'})
+vim.keymap.set('n', '<leader>fi', '<cmd>Telescope lsp_implementations<cr>', {desc = 'implementations'})
+vim.keymap.set('n', '<leader>fm', '<cmd>Telescope notify<cr>', {desc = 'messages'})
 
 vim.keymap.set('n', '<leader>r', vim.lsp.buf.rename, {desc = 'rename'})
 vim.keymap.set('n', '<leader>ld', vim.lsp.buf.type_definition, {desc = 'type definition'})
