@@ -88,6 +88,7 @@ vim.keymap.set('t', '<a-j>', [[<c-\><c-N><c-w>l]])
 
 vim.keymap.set('n', '<leader>ff', '<cmd>Telescope find_files<cr>', {desc = 'files'})
 vim.keymap.set('n', '<leader>fg', '<cmd>Telescope live_grep<cr>', {desc = 'grep'})
+vim.keymap.set('v', '<leader>fg', '<cmd>Telescope grep_string<cr>', {desc = 'grep selection'})
 vim.keymap.set('n', '<leader>fd', '<cmd>Telescope diagnostics<cr>', {desc = 'diagnostics'})
 vim.keymap.set('n', '<leader>fr', '<cmd>Telescope resume<cr>', {desc = 'resume'})
 vim.keymap.set('n', '<leader>fu', '<cmd>Telescope lsp_references<cr>', {desc = 'usages'})
@@ -113,6 +114,8 @@ vim.api.nvim_set_keymap("n", "<leader>g", '<cmd>LazyGit<cr>', {desc = "lazygit"}
 
 local betterTerm = require('betterTerm')
 vim.keymap.set({'n', 't'}, '<c-;>', function() betterTerm.open() end, {desc = 'terminal'})
+
+vim.keymap.set('n', ';', require('jump').start, {desc = "jump"})
 
 -- Autocommands
 vim.api.nvim_create_autocmd('TextYankPost', {
