@@ -54,6 +54,30 @@ alias gp = git push
 alias gpl = git pull
 alias gu = git reset --soft HEAD~1
 
+def fetchall [] {
+    let repos = [
+        ~/nixos
+        ~/.local/share/chezmoi
+        ~/ws/src/hackmud
+    ]
+
+    for repo in $repos {
+        print $"(ansi magenta) ($repo)(ansi reset)"
+
+        if not ($repo | path exists) {
+            print $"(ansi red)dir not found(ansi reset)"
+            continue
+        }
+
+        try {
+            cd $repo
+            git pull
+        }
+
+        print ""
+    }
+}
+
 # chezmoi
 alias ca = chezmoi apply
 alias cu = chezmoi update
