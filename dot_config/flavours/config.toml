@@ -54,7 +54,19 @@ start = "/* Start flavours */"
 end = "/* End flavours */"
 
 [[items]]
+file = "~/ws/vaults/aegyalond/.obsidian/themes/Base16/theme.css"
+template = "obsidian"
+start = "/* Start flavours */"
+end = "/* End flavours */"
+
+[[items]]
 file = "~/ws/vaults/personal/.obsidian/themes/Base16/theme.css"
+template = "obsidian"
+start = "/* Start flavours */"
+end = "/* End flavours */"
+
+[[items]]
+file = "~/ws/vaults/work/.obsidian/themes/Base16/theme.css"
 template = "obsidian"
 start = "/* Start flavours */"
 end = "/* End flavours */"
