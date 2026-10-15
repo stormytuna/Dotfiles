@@ -207,3 +207,6 @@ source ./zoxide.nu
 
 # import color scheme
 source ./colors.nu
+
+# import secrets
+source ./secrets.nu
