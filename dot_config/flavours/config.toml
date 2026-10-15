@@ -1,4 +1,4 @@
-ell = "bash -c '{}'"
+shell = "bash -c '{}'"
 
 [[items]]
 file = "~/.config/waybar/colours.css"
