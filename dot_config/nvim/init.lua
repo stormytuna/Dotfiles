@@ -59,11 +59,6 @@ vim.o.showcmdloc='statusline'
 vim.o.ignorecase = true
 vim.o.smartcase = true
 
--- Diagnostics
---vim.diagnostic.config({
---  virtual_text = false, -- Using tiny-inline-diagnostic
---})
-
 -- Keymaps
 vim.keymap.set('n', '<esc>', ':nohlsearch<cr>:helpclose<cr><esc>')
 vim.keymap.set('n', 'U', '<c-r>')
