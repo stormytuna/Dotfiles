@@ -119,6 +119,8 @@ vim.keymap.set({'n', 't'}, '<c-;>', function() betterTerm.open() end, {desc = 't
 
 vim.keymap.set('n', ';', require('jump').start, {desc = "jump"})
 
+vim.keymap.set('n', '<leader>b', ':GitBlameToggle<cr>', {desc = "git blame"})
+
 -- Autocommands
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking text',
