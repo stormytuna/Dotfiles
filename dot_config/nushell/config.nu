@@ -1,4 +1,4 @@
-$env.path = ($env.path | prepend "/home/stormytuna/.scripts")
+$env.path = ($env.path | prepend "/home/stormytuna/.scripts" | prepend "/home/stormytuna/.local/bin")
 
 $env.config.show_banner = false
 $env.config.buffer_editor = "nvim"
