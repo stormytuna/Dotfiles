@@ -6,8 +6,8 @@ return {
     delete_to_trash = true,
     keymaps = {
       ["<bs>"] = { "actions.parent", mode = "n" },
-      ["<esc>"] = { "actions.close", mode = "n" },
       ["<C-h>"] = { "actions.toggle_hidden", mode = "n" },
+      ["q"] = { "actions.close", mode = "n" },
     },
     float = {
       padding = 4,
