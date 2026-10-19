@@ -1,12 +1,12 @@
 {
   "action": "systemctl poweroff",
-  "keybind": "s",
+  "keybind": "j",
   "label": "shutdown",
   "text": ""
 }
 {
   "action": "systemctl reboot",
-  "keybind": "r",
+  "keybind": "k",
   "label": "reboot",
   "text": ""
 }
@@ -18,7 +18,7 @@
 }
 {
   "action": "systemctl reboot --firmware-setup",
-  "keybind": "f",
+  "keybind": ";",
   "label": "firmware",
   "text": ""
 }
