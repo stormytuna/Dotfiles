@@ -15,6 +15,7 @@ vim.lsp.enable({
   'ts_ls',
   'angularls',
   'gopls',
+  'css',
 })
 
 vim.lsp.config['lua_ls'] = {
