@@ -68,3 +68,8 @@ tooltip {
   border-color: @base0C;
 }
 
+#battery {
+  color: @base0B;
+  border-color: @base0B;
+}
+
