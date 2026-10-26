@@ -82,7 +82,7 @@ bindsym super+r exec pkill fuzzel || fuzzel
 bindsym super+e exec thunar
 bindsym alt+ctrl+v exec cliphist list | fuzzel --dmenu | cliphist decode | wl-copy
 bindsym super+alt+ctrl+shift+x focus output $main; exec wlogout --protocol layer-shell --buttons-per-row 4
-bindsym super+alt+ctrl+shift+c exec killall waybar && waybar
+bindsym super+alt+ctrl+shift+c exec sh -c 'pkill waybar; waybar'
 bindsym super+alt+ctrl+shift+w focus output $main; exec ~/.config/sway/scripts/change-wallpaper.sh
 bindsym super+y exec ~/.config/sway/scripts/send-keypress.sh "app_id=\"vesktop\"" -M ctrl -M shift -k m -m ctrl -m shift
 bindsym super+shift+tab exec ~/.config/sway/scripts/toggle-stacking.sh
