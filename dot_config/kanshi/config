@@ -1,0 +1,13 @@
+profile docked {
+    output DP-2 enable mode 2560x1440@74.971Hz position 0,0 transform 90 scale 1.3
+    output DP-1 enable mode 2560x1440@74.971Hz position 1107,0
+    output eDP-1 enable mode 1920x1200@59.950Hz position 3667,768
+
+    exec pkill waybar; waybar -c ~/.config/kanshi/docked.json
+}
+
+profile laptop {
+    output eDP-1 enable mode 1920x1200@59.950Hz position 0,0
+
+    exec pkill waybar; waybar -c ~/.config/kanshi/laptop.json
+}
