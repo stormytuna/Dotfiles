@@ -27,14 +27,16 @@ def update-flake [] {
     sudo nix flake update --flake .
 
     let flakeLock = "./flake.lock"
+    let flakeMessage = "chore: update flake"
     let hasChanged = (git status --porcelain -- $flakeLock | str trim | is-not-empty)
     if $hasChanged {
         git add -- $flakeLock
-        git commit -m "chore: update flake" -- $flakeLock
+        git commit -m $flakeMessage -- $flakeLock
     }
 
     let ahead = (git rev-list --count '@{upstream}..HEAD' | into int)
-    if $ahead == 1 {
+    let message = (git log -1 --format=%s)
+    if $ahead == 1 and $message == $flakeMessage {
         git push
     }
 
