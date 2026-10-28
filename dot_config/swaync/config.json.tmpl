@@ -1,7 +1,12 @@
 {
   "positionX": "center",
   "positionY": "top",
+{{- if eq .chezmoi.hostname "eva-unit-01" }}
+  "notification-window-preferred-output": "DP-1",
+{{- end }}
+{{- if eq .chezmoi.hostname "eva-unit-02" }}
   "notification-window-preferred-output": "DP-2",
+{{- end }}
   "scripts": {
     "silent": {
       "exec": "~/.config/swaync/playsound.sh silent",
