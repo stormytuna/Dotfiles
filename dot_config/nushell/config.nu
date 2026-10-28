@@ -33,6 +33,11 @@ def update-flake [] {
         git commit -m "chore: update flake" -- $flakeLock
     }
 
+    let ahead = (git rev-list --count '@{upstream}..HEAD' | into int)
+    if $ahead == 1 {
+        git push
+    }
+
     cd $owd
 
     update-system 
