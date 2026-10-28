@@ -96,3 +96,8 @@ rewrite = true
 file = "~/.config/btop/themes/base16.theme"
 template = "btop"
 rewrite = true
+
+[[items]]
+file = "~/.config/swaync/colours.css"
+template = "swaync"
+rewrite = true

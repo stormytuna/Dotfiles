@@ -1,0 +1,159 @@
+@import "./colours.css";
+
+/* General */
+* {
+  font-family: "Fira Code Nerd Font";
+  font-size: 12px;
+}
+
+/* Control centre */
+.control-center {
+  background: @base01;
+  color: @base05;
+  border-color: @base0E;
+}
+
+/* Notification */
+.notification {
+  background: @base01;
+  color: @base05;
+  border: 2px solid @base0E;
+  border-radius: 0;
+}
+
+.notification-row {
+  background: transparent;
+}
+
+.notification-row:focus {
+  background: @base02;
+}
+
+.notification-background {
+  background: transparent;
+}
+
+.notification-default-action {
+  background: transparent;
+  color: @base05;
+}
+
+.notification-default-action:hover {
+  background: @base02;
+}
+
+/* Notification text */
+.summary,
+.time,
+.body {
+  color: @base05;
+  background: transparent;
+  text-shadow: none;
+}
+
+.text-box label {
+  color: @base05;
+}
+
+/* Close button */
+.close-button {
+  background: @base02;
+  color: @base05;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.close-button:hover {
+  background: @base03;
+}
+
+/* Inline reply */
+.inline-reply-entry {
+  background: @base00;
+  color: @base05;
+  caret-color: @base05;
+  border: 1px solid @base0E;
+  border-radius: 0;
+}
+
+.inline-reply-button {
+  background: @base01;
+  color: @base05;
+  border: 1px solid @base0E;
+  border-radius: 0;
+}
+
+.inline-reply-button:hover {
+  background: @base02;
+}
+
+.inline-reply-button:disabled {
+  color: @base03;
+}
+
+/* Alternative notification actions */
+.notification-action > button {
+  background: @base01;
+  color: @base05;
+  border-radius: 0;
+}
+
+.notification-action > button:hover {
+  background: @base02;
+}
+
+/* Notification groups */
+.notification-group {
+  color: @base05;
+}
+
+.notification-group:focus {
+  background: @base02;
+}
+
+.notification-group-headers,
+.notification-group-buttons,
+.notification-group-header,
+.notification-group-icon {
+  color: @base05;
+}
+
+/* Grouped notifications */
+.notification-group.collapsed .notification-row .notification {
+  background: @base01;
+}
+
+.notification-group.collapsed:hover .notification-row .notification {
+  background: @base02;
+}
+
+/* Control centre notification list */
+.control-center-list {
+  background: transparent;
+}
+
+.control-center-list .notification {
+  box-shadow: none;
+}
+
+/* Empty control centre */
+.control-center-list-placeholder {
+  color: @base03;
+}
+
+/* Floating notifications */
+.floating-notifications {
+  background: transparent;
+}
+
+.floating-notifications .notification {
+  box-shadow: none;
+}
+
+/* Widgets */
+.widget {
+  background: @base01;
+  color: @base05;
+  border-radius: 0;
+}

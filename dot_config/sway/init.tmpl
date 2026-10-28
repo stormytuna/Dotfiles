@@ -3,7 +3,7 @@ exec gsettings set org.gnome.desktop.interface icon-theme "Papirus"
 exec gsettings set org.gnome.desktop.interface gtk-theme "adw-gtk3"
 exec blueman-applet
 exec nm-applet
-exec dunst
+exec swaync
 exec sleep 2 && awww-daemon && sleep 2 && awww img ~/.config/sway/current-wallpaper --transition-duration 2 --transition-type any --transition-step 255 --transition-fps 120
 exec waybar
 exec wl-paste --watch cliphist store

@@ -10,7 +10,7 @@ I manage dotfiles with [chezmoi](https://www.chezmoi.io/). After using it for so
 
 - **Status Bar:** [Waybar](https://github.com/Alexays/Waybar). There was a time when I dabbled with other solutions but they were overcomplicated and annoying to tweak. I like the simplicity of Waybar.
 
-- **Notification Daemon:** [Dunst](https://github.com/dunst-project/dunst). A notification daemon is necessary when running a window manager - Dunst is the first one I found that let me output notifications to a specific output. It also supports running scripts when notifications are received, allowing me to configure notification sounds very easily.
+- **Notification Daemon:** [SwayNotificationCenter](https://github.com/ErikReider/SwayNotificationCenter). A notification daemon is necessary when running a window manager - I had used Dunst before, but it outlived its usefulness. I required something that both: falls back to a monitor if the given one isn't available; and worked nicely with my chezmoi + flavours workflow.
 
 - **Logout Menu:** [wlogout](https://github.com/ArtsyMacaw/wlogout) and [swaylock](https://github.com/swaywm/swaylock). These are great tools, once configured to look pretty.
 
@@ -27,6 +27,8 @@ I manage dotfiles with [chezmoi](https://www.chezmoi.io/). After using it for so
 ## What I *don't* use and why
 
 I used to be a big fan of [home manager](https://github.com/nix-community/home-manager), the de facto program config management solution for NixOS. I've changed to this separated approach mainly due to how much I like to tinker. Since my home manager configuration included all the packages my user needed, I would often be stuck waiting upwards of half an hour for packages to download/build, or if they were up-to-date, I'd find myself waiting a minute for the configuration to rebuild anyway.
+
+I previously used [Dunst](https://github.com/dunst-project/dunst) as a notification daemon, but it was replaced by Sway Notifcation Center, as explained above.
 
 ## Showcase
 

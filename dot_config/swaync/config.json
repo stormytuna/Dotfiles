@@ -1,0 +1,31 @@
+{
+  "positionX": "center",
+  "positionY": "top",
+  "notification-window-preferred-output": "DP-2",
+  "scripts": {
+    "silent": {
+      "exec": "~/.config/swaync/playsound.sh silent",
+      "category": "^SILENT$"
+    },
+    "critical": {
+      "exec": "~/.config/swaync/playsound.sh critical",
+      "urgency": "Critical"
+    },
+    "discord": {
+      "exec": "~/.config/swaync/playsound.sh discord",
+      "app-name": "^(discord|vesktop)$"
+    },
+    "slack": {
+      "exec": "true",
+      "app-name": "^Slack$"
+    },
+    "low": {
+      "exec": "~/.config/swaync/playsound.sh low",
+      "urgency": "Low"
+    },
+    "default": {
+      "exec": "~/.config/swaync/playsound.sh default",
+      "urgency": "Normal"
+    }
+  }
+}
