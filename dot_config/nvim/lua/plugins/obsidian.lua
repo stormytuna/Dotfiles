@@ -1,11 +1,13 @@
 return {
-  "epwalsh/obsidian.nvim",
-  lazy = true,
-  ft = "markdown",
+  "obsidian-nvim/obsidian.nvim",
   dependencies = {
     "nvim-lua/plenary.nvim",
   },
   opts = {
+    legacy_commands = false,
+    picker = {
+      name = "telescope.nvim"
+    },
     workspaces = {
       {
         name = "aegyalond",
@@ -13,7 +15,7 @@ return {
       },
       {
         name = "curse of strahd",
-        path = "~/ws/vaults/curse of strahd",
+        path = "/home/stormytuna/ws/vaults/curse of strahd",
       },
       {
         name = "personal",
@@ -23,6 +25,9 @@ return {
         name = "work",
         path = "~/ws/vaults/work",
       },
+    },
+    completion = {
+      match_case = false,
     },
   },
 }
