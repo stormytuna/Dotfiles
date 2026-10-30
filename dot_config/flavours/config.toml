@@ -12,13 +12,6 @@ template = "fuzzel"
 rewrite = true
 
 [[items]]
-file = "~/.config/dunst/dunstrc"
-template = "dunst"
-hook = "dunstctl reload"
-start = "# Start flavours"
-end = "# End flavours"
-
-[[items]]
 file = "~/.config/kitty/colours.conf"
 template = "kitty"
 hook = "kitty @ set-colors -a '~/.config/kitty/colours.conf'"
