@@ -39,6 +39,19 @@ return {
     },
     sources = {
       default = { 'lsp', 'path', 'snippets', 'buffer' },
+      per_filetype = {
+        markdown = { 'lsp', 'snippets', 'buffer', 'obsidian' },
+      },
+      providers = {
+        obsidian = {
+          name = 'obsidian',
+          module = 'blink_obsidian',
+          opts = {
+            min_chars = 2,
+            max_items = 50,
+          },
+        },
+      },
     },
     fuzzy = { implementation = "prefer_rust_with_warning" },
     signature = { enabled = true },
