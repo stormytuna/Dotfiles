@@ -1,6 +1,8 @@
 return {
   'nvim-lualine/lualine.nvim',
-  dependencies = { 'nvim-tree/nvim-web-devicons', 'RRethy/base16-nvim' },
+  -- nvim-navic ships lualine's `navic` component, so it must be on the
+  -- runtimepath before lualine resolves its components.
+  dependencies = { 'nvim-tree/nvim-web-devicons', 'RRethy/base16-nvim', 'SmiteshP/nvim-navic' },
   config = function()
     local lualine = require('lualine')
 
@@ -58,8 +60,9 @@ return {
       },
       tabline = {
         lualine_a = {'filename'},
-        lualine_b = {'tabs'},
-        lualine_c = {'branch', 'diff'},
+        lualine_b = {{'navic', color_correction = 'static'}},
+        lualine_x = {'diff'},
+        lualine_z = {'branch'},
       }
     })
   end,
