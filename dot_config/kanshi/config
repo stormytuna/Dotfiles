@@ -3,11 +3,39 @@ profile docked {
     output DP-1 enable mode 2560x1440@74.971Hz position 1107,0
     output eDP-1 enable mode 1920x1200@59.950Hz position 3667,768
 
+    exec swaymsg workspace 1, move workspace to DP-2
+    exec swaymsg workspace 3, move workspace to eDP-1
+    exec swaymsg workspace 2, move workspace to DP-1
+    exec swaymsg workspace 4, move workspace to DP-1
+    exec swaymsg workspace 5, move workspace to DP-1
+    exec swaymsg workspace 6, move workspace to DP-1
+
     exec pkill waybar; waybar -c ~/.config/kanshi/docked.json
 }
 
 profile laptop {
     output eDP-1 enable mode 1920x1200@59.950Hz position 0,0
+
+    exec swaymsg workspace 1, move workspace to eDP-1
+    exec swaymsg workspace 3, move workspace to eDP-1
+    exec swaymsg workspace 2, move workspace to eDP-1
+    exec swaymsg workspace 4, move workspace to eDP-1
+    exec swaymsg workspace 5, move workspace to eDP-1
+    exec swaymsg workspace 6, move workspace to eDP-1
+
+    exec pkill waybar; waybar -c ~/.config/kanshi/laptop.json
+}
+
+profile hellhole {
+    output eDP-1 enable mode 1920x1200@59.950Hz position 3840,0
+    output DP-5 enable mode 3840x2160@60.000Hz position 0,0
+
+    exec swaymsg workspace 1, move workspace to eDP-1
+    exec swaymsg workspace 3, move workspace to eDP-1
+    exec swaymsg workspace 2, move workspace to eDP-1
+    exec swaymsg workspace 4, move workspace to DP-5
+    exec swaymsg workspace 5, move workspace to DP-5
+    exec swaymsg workspace 6, move workspace to DP-5
 
     exec pkill waybar; waybar -c ~/.config/kanshi/laptop.json
 }
