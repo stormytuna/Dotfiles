@@ -1,5 +1,5 @@
-client.focused #9e6ffe #9e6ffe #303030 #9e6ffe #9e6ffe
-client.focused_inactive #303030 #303030 #cdcdcd #303030 #303030
-client.unfocused #303030 #303030 #cdcdcd #303030 #303030
-client.urgent #f92672 #303030 #cdcdcd #f92672 #f92672
-client.background #303030
+client.focused #a48cf2 #a48cf2 #323449 #a48cf2 #a48cf2
+client.focused_inactive #323449 #323449 #ebfafa #323449 #323449
+client.unfocused #323449 #323449 #ebfafa #323449 #323449
+client.urgent #f16c75 #323449 #ebfafa #f16c75 #f16c75
+client.background #323449
