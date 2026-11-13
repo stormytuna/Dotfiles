@@ -8,6 +8,7 @@
 
 window#waybar {
   background-color: transparent;
+  background-image: linear-gradient(to bottom, alpha(@base00, 0.8), alpha(@base01, 0.0));
 }
 
 tooltip {
